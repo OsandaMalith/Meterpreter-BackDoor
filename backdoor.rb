@@ -1,6 +1,6 @@
 # $Id:swaparoo.rb $ 
 # $Revision: 01 $
-# Meterpreter Swaparoo - Windows Backdoor Method (all Windows versions)
+# Meterpreter BackDoor Script  - Windows Backdoor Method (all Windows versions)
 # Author: Osanda Malith
 # Big Thanks to Hood3dRob1n with his massive support to this script
 # E-mail: OsandaJayathissa@gmail.com
