@@ -15,16 +15,15 @@ class Metasploit3 < Msf::Post
 
   def initialize(info={})
     super( update_info( info,
-      'Name'          => 'WinBack - A Windows Backdoor Method for Sethc.exe or Utilman.exe',
+      'Name'          => 'Swaparoo - A Windows Backdoor Method for Sethc.exe or Utilman.exe',
       'Description'   => %q{
         Sneaks a Backdoor Command Shell in place of Sticky Keys Prompt or 
         Utilman assistant at Windows Login Screen (requires privs)
       },
       'License'       => BSD_LICENSE,
       'Author'        => [ 
-        'Osanda Malith Jayathissa <osandajayathissa[at]gmail.com>'
-        'HR <hood3drob1n[at]gmail.com>', 
-         
+        'Osanda Malith Jayathissa <osandajayathissa[at]gmail.com>', 
+        'HR <hood3drob1n[at]gmail.com>' 
       ],
       'Platform'      => [ 'win' ],
       'Arch'          => [ 'Any' ],
@@ -182,7 +181,7 @@ class Metasploit3 < Msf::Post
       # Check for signs of previous backdooring before taking actions
       # If not, this can overwrite the backup file which means you can't cleanup afterwards!
       # Bail out if found and have user remove, rename, or run restore.....
-      print_status("Starting the backdooring process.....")
+      print_status("Starting the Swaparoo backdooring process.....")
       if target_sethc
         if client.fs.file.exists?("#{path}sethc.exe.bak")
           print_error("Target appears to have already been backdoored!")
@@ -203,7 +202,7 @@ class Metasploit3 < Msf::Post
     end
 
     # All done now
-    print_status("WinBack module has completed!")
+    print_status("Swaparoo module has completed!")
     if datastore['RESET']
       print_good("System should be restored back to normal!")
     else
